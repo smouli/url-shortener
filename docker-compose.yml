@@ -1,0 +1,21 @@
+version: '3'
+services:
+    web:
+        build: .
+        command: python server.py
+        ports:
+            - "5000:8000"
+        volumes:
+            - .:/Dockerfile
+        networks: 
+            - app-tier
+    redis:
+        image: redis:latest
+        ports:
+           - 6379:6379
+        networks: 
+            - app-tier
+
+networks:
+   app-tier:
+     driver: bridge

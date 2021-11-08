@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <br>
+        <a href="/create">Create</a> 
+        &nbsp;
+        <a href="/analytics">Analytics</a>
+        &nbsp;
+        <a href="/delete">Delete</a>
+        <br>
+        <hr/>
+        <br>
+        <form action="/handleCreateRequest">
+            <label for="url">Enter URL:</label>
+            <input type="text" id="url" name="url" ><br><br>
+            <label for="timestamp">Enter expiry time: (In Seconds)</label>
+            <input type="text" id="timestamp" name="timestamp"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr/>
+        <h3> {{ message }} </h3>
+    </body>
+
+</html>
