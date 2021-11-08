@@ -26,10 +26,4 @@ The url shortener uses Redis to persist the data. This will allow for multiple n
 ## Mermaid diagram
 
 This is the basic flow. The server persists info from each request in Redis. 
-```mermaid
-sequenceDiagram
-Web browser ->> Server: Request to create Short Url
-Server ->> Web browser: Short Url
-Web browser-->>Redirected Website: Redirect to website via 302 response from the server
-
-```
+![images/Sequence Diagram](images/diagram.png)
